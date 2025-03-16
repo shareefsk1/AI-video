@@ -1,5 +1,5 @@
 openai
-elevenlabs
+elevenlabs==0.2.3  # Specify a version to avoid conflicts
 moviepy
 requests
 streamlit
