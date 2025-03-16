@@ -1,5 +1,6 @@
+elevenlabs==0.2.3  # Use an older stable version
+pydantic==1.10.13  # Force v1.x (v2.x breaks elevenlabs)
 openai
-elevenlabs==0.2.3  # Specify a version to avoid conflicts
 moviepy
 requests
 streamlit
