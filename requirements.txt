@@ -1,0 +1,6 @@
+openai
+elevenlabs
+moviepy
+requests
+streamlit
+python-dotenv
