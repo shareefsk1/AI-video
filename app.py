@@ -1,5 +1,5 @@
 import os
-import openai
+from openai import OpenAI
 from elevenlabs import generate, set_api_key
 import requests
 from moviepy.editor import ImageClip, concatenate_videoclips, AudioFileClip
@@ -9,12 +9,14 @@ import streamlit as st
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 set_api_key(st.secrets["ELEVENLABS_API_KEY"])
 
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
 def generate_script(prompt):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": f"Write a 30-second video script about: {prompt}"}]
     )
-    return response.choices[0].message['content']
+    return response.choices[0].message.content
 
 def generate_image(prompt, filename):
     response = openai.Image.create(prompt=prompt, n=1, size="256x256")
