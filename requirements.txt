@@ -1,8 +1,8 @@
-moviepy==1.0.3  # Use a compatible version
-imageio-ffmpeg==0.4.9  # Required for video rendering
+openai>=1.0.0
 elevenlabs==0.2.3
+moviepy==1.0.3
+imageio-ffmpeg==0.4.9
+requests==2.32.3
+streamlit==1.43.2
+python-dotenv==1.0.1
 pydantic==1.10.13
-openai
-requests
-streamlit
-python-dotenv
