@@ -12,7 +12,6 @@ warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 # Initialize API clients
-client = from openai import OpenAI
 
 client = OpenAI(api_key="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")
 try:
