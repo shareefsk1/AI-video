@@ -12,7 +12,17 @@ warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 # Initialize API clients
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = from openai import OpenAI
+
+client = OpenAI(api_key="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")
+try:
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": "Hello"}]
+    )
+    print(response.choices[0].message.content)
+except Exception as e:
+    print(f"Error: {str(e)}")
 set_api_key(st.secrets["ELEVENLABS_API_KEY"])
 
 def generate_script(prompt):
