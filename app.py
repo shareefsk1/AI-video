@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings("ignore", category=SyntaxWarning)
 import os
 from openai import OpenAI
 from elevenlabs import generate, set_api_key
