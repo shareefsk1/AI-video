@@ -2,7 +2,7 @@ import os
 import openai
 from elevenlabs import generate, set_api_key
 import requests
-from moviepy.editor import *
+from moviepy.editor import ImageClip, concatenate_videoclips, AudioFileClip
 import streamlit as st
 
 # Load API keys
